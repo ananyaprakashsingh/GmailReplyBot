@@ -106,13 +106,10 @@ async function getUnreadEmails(gmail) {
 
 // Function to process unread emails
 async function processEmails(gmail, messages) {
-    let i = 0;
     for (const email of messages) {
-        if (i < 3) {
-            // Process each email
-            await processEmail(gmail, email);
-            i++;
-        }
+        // Process each email
+        await processEmail(gmail, email);
+        i++;
     }
 }
 
